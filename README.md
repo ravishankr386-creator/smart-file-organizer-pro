@@ -1,42 +1,46 @@
 # Smart File Organizer Pro
 
-AI-powered Windows desktop app for organizing messy folders, sorting files by smart rules, detecting duplicates, previewing changes, and undoing the last run safely.
+![Version](https://img.shields.io/badge/version-1.0.1-2cc6b8)
+![Platform](https://img.shields.io/badge/platform-Windows-6db5ff)
+![Python](https://img.shields.io/badge/python-3.x-13243a)
+![UI](https://img.shields.io/badge/UI-Tkinter-102133)
+
+Clean up messy folders, isolate duplicates, preview changes, and undo the last run with a polished Windows desktop app built for real everyday clutter.
 
 ![Smart File Organizer Pro](assets/smart_file_organizer_pro.png)
 
-## Why People Will Like It
+## Why This Project Stands Out
 
-- Organizes cluttered folders in a few clicks
-- Detects duplicates with staged SHA-256 hashing
-- Shows a preview before moving anything
-- Supports undo for the last run
-- Includes a polished desktop UI
-- Can watch a folder and auto-organize new files
-- Works well for mixed folders with documents, images, videos, code, archives, and more
+- Built for real mixed folders, not just one file type
+- Safer workflow with preview before action
+- Duplicate isolation instead of silent deletion
+- Undo support for the last run
+- Smart mode for practical default organization
+- Desktop-friendly UI for non-technical users
+- Portable `.exe` packaging for easy sharing
 
-## Best For
+## Perfect For
 
 - Downloads folders
 - Desktop cleanup
-- Student project folders
-- Office documents
-- Creator assets
-- Bulk screenshots and exports
-- Mixed personal and work files
+- Student assignments and project files
+- Office and freelance document folders
+- Screenshots, exports, and creator assets
+- Mixed work and personal file collections
 
-## Features
+## Core Features
 
-- Smart classification using type signals, keywords, and date-aware grouping
-- Multiple organize modes: `Smart`, `Type`, `Date`, and `Size`
-- Duplicate isolation into `_duplicates`
-- File name cleanup option for noisy names
-- AI-style insights panel with local analysis and optional ChatGPT recommendations
-- Preview table for planned moves before execution
-- Duplicate review panel that shows which file is kept
-- Auto mode that watches for new files and organizes them automatically
-- Desktop executable packaging for easy sharing
+- Smart classification using file type, keyword, and timeline signals
+- Organize modes: `Smart`, `Type`, `Date`, and `Size`
+- Duplicate detection with staged SHA-256 hashing
+- Preview panel for planned actions before execution
+- Duplicate review panel showing the kept file
+- File name cleanup option for noisy filenames
+- Auto-watch mode for organizing newly added files
+- Undo log to reverse the last run
+- Optional AI-style recommendations with local analysis and ChatGPT-ready flow
 
-## Supported File Categories
+## Supported Categories
 
 - Images
 - Videos
@@ -51,30 +55,32 @@ AI-powered Windows desktop app for organizing messy folders, sorting files by sm
 ## How It Works
 
 1. Select a folder.
-2. Review the recommended strategy.
-3. Preview the planned changes.
-4. Start organizing.
+2. Pick or accept the recommended strategy.
+3. Preview all planned moves.
+4. Run the organizer.
 5. Undo the last run if needed.
 
-## Download And Run
+## Safety First
 
-If you just want the app:
+- Protected system folders are blocked
+- Preview is available before moving files
+- Duplicate files are moved into `_duplicates`
+- Undo information is stored for the last run
 
-1. Open the `release` or `dist` output from this project.
-2. Run `Smart_File_Organizer_Pro.exe`.
+## Download
 
-If you want to build it yourself:
+Portable build outputs:
+
+- `dist/Smart_File_Organizer_Pro.exe`
+- `release/Smart_File_Organizer_Pro_Portable/Smart_File_Organizer_Pro.exe`
+- `release/Smart_File_Organizer_Pro_Portable_v1.0.1.zip`
+
+## Build Locally
 
 ```powershell
 python -m py_compile Smart_file_Organizer_Pro.py
 powershell -ExecutionPolicy Bypass -File .\build_release.ps1
 ```
-
-Build output:
-
-- `dist/Smart_File_Organizer_Pro.exe`
-- `release/Smart_File_Organizer_Pro_Portable/Smart_File_Organizer_Pro.exe`
-- `release/Smart_File_Organizer_Pro_Portable_v1.0.1.zip`
 
 ## Project Structure
 
@@ -91,26 +97,15 @@ assets/
 - Python
 - Tkinter / ttk
 - PyInstaller
-- Windows desktop packaging
+- Windows packaging
 
-## Safety Notes
+## Search Keywords
 
-- Protected system folders are blocked
-- Preview is available before execution
-- Duplicate handling keeps one file and moves extras to `_duplicates`
-- Undo log is stored so the last run can be reversed
-
-## Version
-
-Current version: `1.0.1`
-
-## Keywords
-
-file organizer, duplicate file finder, desktop cleaner, folder organizer, download folder organizer, Windows file management, Python desktop app, AI file organizer, file sorting app, clutter cleanup tool
+file organizer, duplicate finder, folder cleaner, downloads organizer, desktop cleanup app, Windows productivity app, Python desktop app, smart file sorting tool, duplicate file cleanup, clutter management
 
 ## Contributing
 
-Ideas, bug reports, UI improvements, packaging help, and feature requests are welcome.
+Bug reports, feature requests, UI improvements, packaging upgrades, and workflow polish are all welcome.
 
 ## Author
 

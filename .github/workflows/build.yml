@@ -1,0 +1,37 @@
+name: Build Windows App
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyInstaller
+        run: python -m pip install --upgrade pip pyinstaller
+
+      - name: Verify syntax
+        run: python -m py_compile Smart_file_Organizer_Pro.py
+
+      - name: Build executable
+        run: powershell -ExecutionPolicy Bypass -File .\build_release.ps1
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: Smart_File_Organizer_Pro_Portable
+          path: |
+            dist/Smart_File_Organizer_Pro.exe
+            release/Smart_File_Organizer_Pro_Portable_v1.0.1.zip
